@@ -45,40 +45,37 @@ public class NPC
         speed = speed1;
         rate_of_fire = rate_of_fire1;
 
-        if(r.nextInt(4) == 0)
+        int dir = r.nextInt(4);
+        switch (dir) 
         {
+  case 0:
             x = (double) r.nextInt(width);
             dir_x = r.nextInt(width);
             y  = 0.0;
             dir_y = height;
             calculatedxdy();
-        }
-
-        if(r.nextInt(4) == 1)
-        {
+    break;
+  case 1:
             x = (double) width;
             dir_x = 0;
             y = (double) r.nextInt(height);
             dir_y = r.nextInt(height);
             calculatedxdy();
-        }
-
-        if(r.nextInt(4) == 2)
-        {
+    break;
+  case 2:
             x = (double) r.nextInt(width);
             dir_x = r.nextInt(width);
             y = (double) height;
             dir_y = 0;
             calculatedxdy();
-        }
-
-        if(r.nextInt(4) == 3)
-        {
+    break;
+  case 3:
             x = 0.0;
             dir_x = width;
             y = (double) r.nextInt(height);
             dir_y =  r.nextInt(height);
             calculatedxdy();
+    break;
         }
 
     }
